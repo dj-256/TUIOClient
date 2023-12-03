@@ -1,5 +1,4 @@
-# Install and run
-* `npm install`
-* Debug mode: `npm run debug`
-* "Normal" mode: `npm run start`
-* Run linter: `npm run eslint`
+# tuioclient
+
+This module contains the client side implementation of the TUIO protocol.
+The TUIO client receives OSC messages from a TUIO server and broadcasts them in a socketIO server.
