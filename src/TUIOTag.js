@@ -2,9 +2,9 @@
  * @author Christian Brel <ch.brel@gmail.com>
  */
 
-import TUIOObject from './TUIOObject.js'
+import { TUIOObject } from "./TUIOObject.js";
 
-import { TAG_SOCKETIO_TYPE } from './constants.js'
+import { TAG_SOCKETIO_TYPE } from "./constants.js";
 
 /**
  * Main class to manage TUIOTag.
@@ -12,7 +12,7 @@ import { TAG_SOCKETIO_TYPE } from './constants.js'
  * @class TUIOTag
  * @extends TUIOObject
  */
-class TUIOTag extends TUIOObject {
+export class TUIOTag extends TUIOObject {
   /**
    * TUIOTag constructor.
    *
@@ -24,9 +24,9 @@ class TUIOTag extends TUIOObject {
    * @param {string/number} angle - TUIOTag's angle.
    */
   constructor(id, tagId, x, y, angle) {
-    super(id, x, y)
-    this._tagId = tagId
-    this._angle = angle
+    super(id, x, y);
+    this._tagId = tagId;
+    this._angle = angle;
   }
 
   /**
@@ -34,7 +34,9 @@ class TUIOTag extends TUIOObject {
    *
    * @returns {string|number} TUIOTag's tagId.
    */
-  get tagId() { return this._tagId }
+  get tagId() {
+    return this._tagId;
+  }
 
   /**
    * Give the TUIOTag's JSON representation.
@@ -42,14 +44,12 @@ class TUIOTag extends TUIOObject {
    * @method toJSON
    */
   toJSON() {
-    const objJSON = super.toJSON()
+    const objJSON = super.toJSON();
     return {
       ...objJSON,
       id: this._tagId,
       type: TAG_SOCKETIO_TYPE,
       angle: this._angle,
-    }
+    };
   }
 }
-
-export default TUIOTag
