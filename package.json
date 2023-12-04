@@ -5,8 +5,6 @@
     "type": "git",
     "url": "git+https://github.com/dj-256/TUIOClient.git"
   },
-  "private": true,
-  "license": "AtelierIHM",
   "type": "module",
   "main": "src/index.js",
   "files": [
@@ -23,7 +21,7 @@
   },
   "dependencies": {
     "express": "4.18.2",
-    "node-osc": "9.0.2",
+    "node-osc": "^2.1.0",
     "socket.io": "4.7.2"
   },
   "devDependencies": {
